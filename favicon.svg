@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>PO architecture mark</title>
+  <rect width="64" height="64" fill="#102a43"/>
+  <g fill="none" stroke="#f15a29" stroke-linecap="square" stroke-width="0">
+    <path d="M5 35h4v-5h6"/>
+    <path d="M30 5v5"/>
+    <path d="M34 50v5"/>
+    <path d="M50 29h4v5h6"/>
+  </g>
+  <rect x="20" y="18" width="26" height="26" fill="#f15a29"/>
+</svg>

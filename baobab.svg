@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="blueprint-svg" viewBox="0 0 520 520" aria-hidden="true">
+  <style>
+    :root {
+      --blue: #2A4356;
+      --orange: #D1612A;
+      --ink: #1B2B38;
+      --paper: #F6F4F0;
+    }
+    .blueprint-svg { color: var(--blue); }
+    .blueprint-field { fill: var(--blue); }
+    .blueprint-grid { fill: url(#blueprint-grid); }
+    .trace { fill: none; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 2; }
+    .trace-blue { stroke: #7190aa; }
+    .trace-orange { stroke: var(--orange); }
+    .node rect { fill: var(--blue); stroke: #9fb2c2; stroke-width: 1.5; }
+    .node-core rect { fill: var(--orange); stroke: var(--orange); }
+    .node text { fill: var(--paper); font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 2px; text-anchor: middle; }
+    .node-core text { fill: var(--ink); font-size: 17px; font-weight: 500; }
+    .node-core .node-caption { font-size: 8px; letter-spacing: 1px; }
+    .node line { stroke: var(--ink); stroke-width: 1; }
+    .chip rect { fill: var(--blue); stroke: var(--orange); stroke-width: 1.5; }
+    .chip path { fill: none; stroke: #9fb2c2; stroke-width: 2; }
+    .terminal circle { fill: var(--orange); }
+    .blueprint-label { fill: #9fb2c2; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 1px; }
+    .blueprint-label-right { text-anchor: end; }
+  </style>
+  <defs>
+    <pattern id="blueprint-grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M 26 0 L 0 0 0 26" fill="none" stroke="currentColor" stroke-width="0.7" opacity=".24"/>
+    </pattern>
+  </defs>
+  <rect class="blueprint-field" x="12" y="12" width="496" height="496" rx="2"/>
+  <rect class="blueprint-grid" x="12" y="12" width="496" height="496"/>
+  <!-- Baobab PCB Tree -->
+  
+  <!-- Base & Roots -->
+  <path class="trace trace-blue" style="stroke-width: 2;" d="M180 380 V410 L140 450 H100 M200 380 V430 L160 470 V490 M220 380 V450 L190 480 V490 M240 380 V460 L210 490 M260 380 V460 L290 490 M280 380 V450 L310 480 V490 M300 380 V430 L340 470 V490 M320 380 V410 L360 450 H400"/>
+  
+  <!-- Massive Trunk Shading -->
+  <path class="trace trace-blue" style="stroke-width: 2;" d="M180 380 V200 M200 380 V320 L220 300 V200 M220 380 V350 L200 330 V200 M240 380 V310 L260 290 V200 M260 380 V280 L240 260 V200 M280 380 V330 L300 310 V200 M300 380 V290 L280 270 V200 M320 380 V200 M200 260 H300 M180 300 H240 M260 340 H320 M220 230 H280"/>
+  <path class="trace trace-orange" style="stroke-width: 1.5;" d="M190 380 V200 M210 380 V290 L250 250 V200 M230 380 V340 L190 300 M250 380 V320 L210 280 M270 380 V260 L310 220 V200 M290 380 V300 L250 260 M310 380 V340 L270 300 M310 200 V170 L340 140 V100 M190 200 V170 L160 140 V100 M250 380 V420 L220 450 V480 M270 380 V420 L300 450 V480"/>
+
+  <!-- Canopy / Branches -->
+  <path class="trace trace-blue" style="stroke-width: 2;" d="M180 200 V170 L140 130 H100 M200 200 V150 L160 110 V90 M220 200 V130 L190 100 V90 M240 200 V120 L210 90 M260 200 V120 L290 90 M280 200 V130 L310 100 V90 M300 200 V150 L340 110 V90 M320 200 V170 L360 130 H400"/>
+
+  <!-- Tech Nodes embedded in Canopy -->
+  <g class="node node-small"><rect x="175" y="32" width="70" height="38"/><text x="210" y="56" text-anchor="middle">AI</text></g>
+  <g class="node node-small"><rect x="255" y="32" width="70" height="38"/><text x="290" y="56" text-anchor="middle">DDD</text></g>
+  <g class="node node-small"><rect x="80" y="111" width="70" height="38"/><text x="115" y="135" text-anchor="middle">SECURITY</text></g>
+  <g class="node node-small"><rect x="350" y="111" width="70" height="38"/><text x="385" y="135" text-anchor="middle">API</text></g>
+  <g class="node node-core"><rect x="200" y="240" width="100" height="60"/><text x="250" y="270" text-anchor="middle">DOMAIN</text></g>
+  
+  <g class="chip" transform="translate(120 40)"><rect width="40" height="40"/><path d="M10 10 H30 M10 20 H30 M10 30 H30"/></g>
+  <g class="chip" transform="translate(340 40)"><rect width="40" height="40"/><path d="M10 10 H30 M10 20 H30 M10 30 H30"/></g>
+
+  <g class="terminal">
+    <circle cx="100" cy="130" r="4"/><circle cx="160" cy="90" r="4"/><circle cx="190" cy="90" r="4"/><circle cx="210" cy="90" r="4"/><circle cx="290" cy="90" r="4"/><circle cx="310" cy="90" r="4"/><circle cx="340" cy="90" r="4"/><circle cx="400" cy="130" r="4"/>
+    <circle cx="100" cy="450" r="4"/><circle cx="160" cy="490" r="4"/><circle cx="190" cy="490" r="4"/><circle cx="210" cy="490" r="4"/><circle cx="290" cy="490" r="4"/><circle cx="310" cy="490" r="4"/><circle cx="340" cy="490" r="4"/><circle cx="400" cy="450" r="4"/>
+    <circle cx="160" cy="100" r="4"/><circle cx="340" cy="100" r="4"/><circle cx="220" cy="480" r="4"/><circle cx="300" cy="480" r="4"/>
+  </g>
+
+  <text class="blueprint-label" x="30" y="488">BAOBAB.PC / 01</text>
+  <text class="blueprint-label blueprint-label-right" x="490" y="488">LUX / BAOBAB</text>
+</svg>
